@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Registration</title>
+  <style>
+    body {
+  font-family: Arial, sans-serif;
+  background: #ECFAE5;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.card {
+  background: #DDF6D2;
+  max-width: 600px;
+  width: 100%;
+  margin: 24px;
+  padding: 28px 32px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+header {
+  font-size: 22px;
+  font-weight: bold;
+  color: #2b4a2f;
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.section-title {
+  margin: 16px 0 10px;
+  font-size: 15px;
+  font-weight: 700;
+  color: #3a5a40;
+  border-left: 4px solid #B0DB9C;
+  padding-left: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px 22px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #2b4a2f;
+  font-weight: 600;
+}
+
+.control {
+  padding: 10px 12px;
+  border: 1px solid #B0DB9C;
+  border-radius: 8px;
+  background: #ECFAE5;
+  font-size: 14px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.control:focus {
+  outline: none;
+  border: 1px solid #3a5a40;
+  box-shadow: 0 0 5px rgba(46, 82, 46, 0.3);
+}
+
+.help {
+  font-size: 12px;
+  color: #4d704d;
+  margin-top: 3px;
+}
+
+.footer {
+  text-align: right;
+  margin-top: 22px;
+}
+
+.btn {
+  background: #B0DB9C;
+  border: none;
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #2b4a2f;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #CAE8BD;
+}
+
+  </style>
+</head>
+<body>
+  <main class="card" role="main" aria-labelledby="formTitle">
+    <header id="formTitle">Registration</header>
+    <form action="#" method="post" novalidate>
+      <p class="section-title">Personal Details</p>
+
+      <div class="grid" aria-label="Personal details fields">
+        <div class="row">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" name="fullName" class="control" type="text" placeholder="Enter your name" required />
+        </div>
+        <div class="row">
+          <label for="dob">Date of Birth</label>
+          <input id="dob" name="dob" class="control" type="date" placeholder="Enter birth date" required />
+        </div>
+        <div class="row">
+          <label for="email">Email</label>
+          <input id="email" name="email" class="control" type="email" placeholder="Enter your email" required />
+        </div>
+        <div class="row">
+          <label for="mobile">Mobile number</label>
+          <input id="mobile" name="mobile" class="control" type="tel" inputmode="numeric" pattern="[0-9]{10}" maxlength="10" placeholder="Enter mobile number" required />
+          <span class="help">10 digits</span>
+        </div>
+        <div class="row">
+          <label for="gender">Gender</label>
+          <select id="gender" name="gender" class="control" required>
+            <option value="" disabled selected>Select gender</option>
+            <option>Male</option>
+            <option>Female</option>
+            <option>Other</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="occupation">Occupation</label>
+          <input id="occupation" name="occupation" class="control" type="text" placeholder="Enter occupation" />
+        </div>
+      </div>
+
+      <p class="section-title" style="margin-top:18px;">Identity Details</p>
+
+      <div class="grid" aria-label="Identity details fields">
+        <div class="row">
+          <label for="idType">ID Type</label>
+          <select id="idType" name="idType" class="control" required>
+            <option value="" disabled selected>Enter ID type</option>
+            <option>Aadhaar</option>
+            <option>PAN</option>
+            <option>Passport</option>
+            <option>Driving Licence</option>
+            <option>Voter ID</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="row">
+          <label for="idNumber">ID Number</label>
+          <input id="idNumber" name="idNumber" class="control" type="text" placeholder="Enter ID number" required />
+        </div>
+        <div class="row">
+          <label for="issueAuth">Issue Authority</label>
+          <input id="issueAuth" name="issueAuth" class="control" type="text" placeholder="Enter issue department" />
+        </div>
+        <div class="row">
+          <label for="issueDate">Issue Date</label>
+          <input id="issueDate" name="issueDate" class="control" type="date" placeholder="Enter ID issue date" />
+        </div>
+        <div class="row">
+          <label for="issueState">Issue State</label>
+          <input id="issueState" name="issueState" class="control" type="text" placeholder="Enter ID issue state" />
+        </div>
+        <div class="row">
+          <label for="expiryDate">Expiry Date</label>
+          <input id="expiryDate" name="expiryDate" class="control" type="date" placeholder="Enter ID expiry date" />
+        </div>
+      </div>
+
+      <div class="footer">
+        <button class="btn" type="submit" aria-label="Go to next step">Next →</button>
+      </div>
+    </form>
+  </main>
+</body>
+</html>
